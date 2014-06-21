@@ -1,0 +1,24 @@
+
+{assign var=children value=$Site->getNavigation()}
+
+{if count($children)}
+<ul>
+    {if $Site->getId() == 1 && !isset($no_home)}
+    <li>
+        <a href="{url site=$Site}">
+            {t}quiqqer/template-html5up-escape-velocity header.menu.home.title{/t}
+        </a>
+    </li>
+    {/if}
+
+    {foreach from=$children item=Child}
+    <li>
+        <a href="{url site=$Child}">
+            {$Child->getAttribute('title')}
+        </a>
+
+        {include file="`$TPL_DIR`lib/nav.html" Site=$Child}
+    </li>
+    {/foreach}
+</ul>
+{/if}

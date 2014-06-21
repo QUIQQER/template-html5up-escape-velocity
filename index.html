@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<!--
+    Escape Velocity 2.5 by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        {$Template->getHeader()}
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900" rel="stylesheet" />
+
+        <script src="{$URL_TPL_DIR}bin/js/jquery.min.js"></script>
+        <script src="{$URL_TPL_DIR}bin/js/jquery.dropotron.min.js"></script>
+        <script src="{$URL_TPL_DIR}bin/js/config.js"></script>
+        <script src="{$URL_TPL_DIR}bin/js/skel.min.js"></script>
+        <script src="{$URL_TPL_DIR}bin/js/skel-panels.min.js"></script>
+
+        <noscript>
+            <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/skel-noscript.css" />
+            <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css" />
+            <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style-desktop.css" />
+        </noscript>
+
+        <!--[if lte IE 8]>
+            <script src="{$URL_TPL_DIR}bin/js/html5shiv.js"></script>
+            <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/ie8.css" />
+        <![endif]-->
+
+    </head>
+    <body class="left-sidebar">
+
+        <!-- Header Wrapper -->
+            <div id="header-wrapper" class="wrapper"
+                style="background-image: url('{$Site->getAttribute('image_emotion')}');"
+            >
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Header -->
+                                <div id="header">
+
+                                    <!-- Logo -->
+                                        <div id="logo">
+                                            <h1>{$Site->getAttribute('title')}</h1>
+                                            <span class="byline">
+                                                {$Site->getAttribute('short')}
+                                            </span>
+                                        </div>
+                                    <!-- /Logo -->
+
+                                    <!-- Nav -->
+                                        <nav id="nav">
+                                            {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
+                                        </nav>
+                                    <!-- /Nav -->
+
+                                </div>
+                            <!-- /Header -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Header Wrapper -->
+
+        <!-- Main Wrapper -->
+            <div class="wrapper wrapper-style2">
+                {*<div class="title">Left Sidebar</div>*}
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Main -->
+                                <div id="main">
+                                    <div>
+                                        <div class="row">
+                                            <div class="4u">
+
+                                                <!-- Sidebar -->
+                                                    <div id="sidebar">
+                                                        <section class="is">
+                                                            <header>
+                                                                <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
+                                                            </header>
+                                                            {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild() no_home=1}
+                                                        </section>
+                                                    </div>
+                                                <!-- /Sidebar -->
+
+                                            </div>
+                                            <div class="8u skel-cell-important">
+
+                                                <!-- Content -->
+                                                    <div id="content">
+                                                        {$Template->getBody()}
+                                                    </div>
+                                                <!-- /Content -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- /Main -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Main Wrapper -->
+
+        {*
+        <!-- Highlights Wrapper -->
+            <div class="wrapper wrapper-style3">
+                <div class="title">The Endorsements</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Highlights -->
+                                <div id="highlights">
+                                    <div>
+                                        <div class="row">
+                                            <div class="4u">
+                                                <section class="highlight highlight-one">
+                                                    <a href="http://fav.me/d59i3b3" class="image image-full"><img src="{$URL_TPL_DIR}bin/images/pic02.jpg" alt="" /></a>
+                                                    <h3><a href="">Aliquam diam consequat</a></h3>
+                                                    <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                                    <ul class="actions">
+                                                        <li><a href="#" class="button button-style1">Learn More</a></li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                            <div class="4u">
+                                                <section class="highlight highlight-two">
+                                                    <a href="http://fav.me/d4tqyby" class="image image-full"><img src="{$URL_TPL_DIR}bin/images/pic03.jpg" alt="" /></a>
+                                                    <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+                                                    <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                                    <ul class="actions">
+                                                        <li><a href="#" class="button button-style1">Learn More</a></li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                            <div class="4u">
+                                                <section class="highlight highlight-three">
+                                                    <a href="http://fav.me/d5w2dot" class="image image-full"><img src="{$URL_TPL_DIR}bin/images/pic04.jpg" alt="" /></a>
+                                                    <h3><a href="#">Mattis tempus lorem</a></h3>
+                                                    <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                                    <ul class="actions">
+                                                        <li><a href="#" class="button button-style1">Learn More</a></li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- /Highlights -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Highlights Wrapper -->
+        *}
+
+        <!-- Footer Wrapper -->
+            <div id="footer-wrapper" class="wrapper">
+                <div class="title">{t}quiqqer/template-html5up-escape-velocity footer.title{/t}</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Footer -->
+                                <div id="footer">
+                                    <header class="style1">
+                                        <h2>{t}quiqqer/template-html5up-escape-velocity footer.header.title{/t}</h2>
+                                        <p class="byline">
+                                            {t}quiqqer/template-html5up-escape-velocity footer.header.text{/t}
+                                        </p>
+                                    </header>
+                                    <hr />
+                                    <div>
+                                        <div class="row">
+                                            <div class="6u">
+
+                                                <!-- Contact Form -->
+                                                    <section class="footer-one">
+                                                        <form method="post" action="#">
+                                                            <div>
+                                                                <div class="row half">
+                                                                    <div class="6u">
+                                                                        <input type="text"
+                                                                            class="text"
+                                                                            name="name"
+                                                                            id="contact-name"
+                                                                            placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.name.placeholder{/t}"
+                                                                        />
+                                                                    </div>
+                                                                    <div class="6u">
+                                                                        <input type="text"
+                                                                            class="text"
+                                                                            name="name"
+                                                                            id="contact-email"
+                                                                            placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.email.placeholder{/t}"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row half">
+                                                                    <div class="12u">
+                                                                        <textarea name="message"
+                                                                            id="contact-message"
+                                                                            placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.message.placeholder{/t}"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="12u">
+                                                                        <ul class="actions">
+                                                                            <li>
+                                                                                <input type="submit"
+                                                                                    class="button button-style1"
+                                                                                    value="{t}quiqqer/template-html5up-escape-velocity footer.contact.send.button.placeholder{/t}"
+                                                                                />
+                                                                            </li>
+                                                                            <li>
+                                                                                <input type="reset"
+                                                                                    class="button button-style2"
+                                                                                    value="{t}quiqqer/template-html5up-escape-velocity footer.contact.reset.button.placeholder{/t}"
+                                                                                />
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </section>
+                                                <!-- /Contact Form -->
+
+                                            </div>
+                                            <div class="6u">
+
+                                                <!-- Contacts -->
+                                                    <section class="footer-two">
+                                                        <div class="feature-list feature-list-small">
+                                                            <div>
+                                                                <div class="row">
+                                                                    <div class="6u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-home">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.mailing.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.mailing.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="6u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-comment">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.social.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.social.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="6u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-envelope">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.email.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.email.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="6u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-phone">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.phone.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.phone.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                <!-- /Contacts -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                            <!-- /Footer -->
+
+                            <!-- Copyright -->
+                                <div id="copyright">
+                                    <span>
+                                        &copy; {$smarty.now|date_format:"%Y"} {t}quiqqer/template-html5up-escape-velocity footer.copyright{/t}. Design by <a href="http://html5up.net/">HTML5 UP</a>.
+                                    </span>
+                                </div>
+                            <!-- /Copyright -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Footer Wrapper -->
+
+    </body>
+</html>
