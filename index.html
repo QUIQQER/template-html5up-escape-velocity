@@ -23,6 +23,7 @@
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/skel-noscript.css" />
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css" />
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style-desktop.css" />
+            <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/sheet.css" />
         </noscript>
 
         <!--[if lte IE 8]>
@@ -34,8 +35,10 @@
     <body class="left-sidebar">
 
         <!-- Header Wrapper -->
-            <div id="header-wrapper" class="wrapper"
-                style="background-image: url('{$Site->getAttribute('image_emotion')}');"
+            {image src=$Site->getAttribute('image_emotion') assign=emotionImage width=1900 onlysrc=true rewrited=true}
+            <div id="header-wrapper"
+                 class="wrapper"
+                 style="background-image: url('{$emotionImage}');"
             >
                 <div class="container">
                     <div class="row">
@@ -46,8 +49,21 @@
 
                                     <!-- Logo -->
                                         <div id="logo">
-                                            <h1>{$Site->getAttribute('title')}</h1>
-                                            <span class="byline">
+                                            <h1 data-editable="true"
+                                                data-editAttribute="title"
+                                                data-project="{$Project->getName()}"
+                                                data-lang="{$Project->getLang()}"
+                                                data-id="{$Site->getId()}"
+                                            >
+                                                {$Site->getAttribute('title')}
+                                            </h1>
+                                            <span class="byline"
+                                                data-editable="true"
+                                                data-editAttribute="short"
+                                                data-project="{$Project->getName()}"
+                                                data-lang="{$Project->getLang()}"
+                                                data-id="{$Site->getId()}"
+                                            >
                                                 {$Site->getAttribute('short')}
                                             </span>
                                         </div>
@@ -70,7 +86,7 @@
 
         <!-- Main Wrapper -->
             <div class="wrapper wrapper-style2">
-                {*<div class="title">Left Sidebar</div>*}
+
                 <div class="container">
                     <div class="row">
                         <div class="12u">
@@ -83,11 +99,43 @@
 
                                                 <!-- Sidebar -->
                                                     <div id="sidebar">
+                                                        {*
+                                                        {assign var=langs value=$Project->getAttribute('langs')}
+                                                        {if $langs}
                                                         <section class="is">
+                                                            <header>
+                                                                <h2>
+                                                                    {t}quiqqer/template-html5up-escape-velocity lang.title{/t}
+                                                                </h2>
+                                                            </header>
+
+                                                            <ul>
+                                                            {foreach from=$langs item=lang}
+                                                                {if $Project->getLang() != $lang && $Site->existLang( $lang )}
+                                                                <li>
+                                                                    <a href="{url project=$Project->getName() lang=$lang id=$Site->getId( $lang )}">
+                                                                        {$lang}
+                                                                    </a>
+                                                                </li>
+                                                                {/if}
+                                                            {/foreach}
+                                                            </ul>
+                                                        </section>
+                                                        {/if}
+                                                        *}
+
+                                                        <section class="left-menu">
                                                             <header>
                                                                 <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
                                                             </header>
-                                                            {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild() no_home=1}
+                                                            {include file="`$TPL_DIR`lib/leftMenu.html"
+                                                                Site=$Project->firstChild()
+                                                                ActiveSite=$Site
+                                                            }
+                                                        </section>
+
+                                                        <section class="left-content">
+                                                            {$Site->getAttribute('extra_content')}
                                                         </section>
                                                     </div>
                                                 <!-- /Sidebar -->
@@ -169,7 +217,9 @@
 
         <!-- Footer Wrapper -->
             <div id="footer-wrapper" class="wrapper">
-                <div class="title">{t}quiqqer/template-html5up-escape-velocity footer.title{/t}</div>
+                <div class="title">
+                    {t}quiqqer/template-html5up-escape-velocity footer.title{/t}
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="12u">
@@ -184,12 +234,26 @@
                                     </header>
                                     <hr />
                                     <div>
+                                        {assign var=showContact value=$Project->getConfig('html5up_escape_velocity.contact.showcontact')}
                                         <div class="row">
-                                            <div class="6u">
-
+                                            {if $showContact}
+                                            <div class="6u" id="contact">
                                                 <!-- Contact Form -->
+                                                {if isset($contact_success_message)}
+                                                    <div class="message-success">
+                                                        {$contact_success_message}
+                                                    </div>
+                                                {else}
+
+                                                    {if isset($contact_error_message)}
+                                                        <div class="message-error">
+                                                            {$contact_error_message}
+                                                        </div>
+                                                    {/if}
+
                                                     <section class="footer-one">
-                                                        <form method="post" action="#">
+                                                        <form method="post" action="#contact">
+                                                            <input type="hidden" name="contact" />
                                                             <div>
                                                                 <div class="row half">
                                                                     <div class="6u">
@@ -197,14 +261,16 @@
                                                                             class="text"
                                                                             name="name"
                                                                             id="contact-name"
+                                                                            required="required"
                                                                             placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.name.placeholder{/t}"
                                                                         />
                                                                     </div>
                                                                     <div class="6u">
-                                                                        <input type="text"
+                                                                        <input type="email"
                                                                             class="text"
-                                                                            name="name"
+                                                                            name="email"
                                                                             id="contact-email"
+                                                                            required="required"
                                                                             placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.email.placeholder{/t}"
                                                                         />
                                                                     </div>
@@ -213,6 +279,7 @@
                                                                     <div class="12u">
                                                                         <textarea name="message"
                                                                             id="contact-message"
+                                                                            required="required"
                                                                             placeholder="{t}quiqqer/template-html5up-escape-velocity footer.contact.message.placeholder{/t}"></textarea>
                                                                     </div>
                                                                 </div>
@@ -237,11 +304,11 @@
                                                             </div>
                                                         </form>
                                                     </section>
+                                                {/if}
                                                 <!-- /Contact Form -->
-
                                             </div>
-                                            <div class="6u">
 
+                                            <div class="6u">
                                                 <!-- Contacts -->
                                                     <section class="footer-two">
                                                         <div class="feature-list feature-list-small">
@@ -294,8 +361,65 @@
                                                         </div>
                                                     </section>
                                                 <!-- /Contacts -->
+                                            </div>
+                                            {else}
+                                            <div class="12u">
+                                                <!-- Contacts -->
+                                                    <section class="footer-two">
+                                                        <div class="feature-list feature-list-small">
+                                                            <div>
+                                                                <div class="row">
+                                                                    <div class="3u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-home">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.mailing.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.mailing.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="3u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-comment">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.social.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.social.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+
+                                                                    <div class="3u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-envelope">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.email.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.email.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="3u">
+                                                                        <section>
+                                                                            <h3 class="fa fa-phone">
+                                                                                {t}quiqqer/template-html5up-escape-velocity footer.phone.title{/t}
+                                                                            </h3>
+                                                                            {strip}
+                                                                            {t}quiqqer/template-html5up-escape-velocity footer.phone.text{/t}
+                                                                            {/strip}
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                <!-- /Contacts -->
 
                                             </div>
+
+                                            {/if}
+
                                         </div>
                                     </div>
                                     <hr />
@@ -305,7 +429,9 @@
                             <!-- Copyright -->
                                 <div id="copyright">
                                     <span>
-                                        &copy; {$smarty.now|date_format:"%Y"} {t}quiqqer/template-html5up-escape-velocity footer.copyright{/t}. Design by <a href="http://html5up.net/">HTML5 UP</a>.
+                                        &copy; {$smarty.now|date_format:"%Y"} {t}quiqqer/template-html5up-escape-velocity footer.copyright{/t}.
+                                        Design by <a href="http://html5up.net/" rel="nofollow">HTML5 UP</a>.
+                                        System <a href="http://www.quiqqer.com">QUIQQER</a>.
                                     </span>
                                 </div>
                             <!-- /Copyright -->

@@ -9,6 +9,11 @@
         <en><![CDATA[Home]]></en>
     </locale>
 
+    <locale name="lang.title">
+        <de><![CDATA[Sprache wechseln]]></de>
+        <en><![CDATA[Change Language]]></en>
+    </locale>
+
     <!-- menu -->
     <locale name="menu.title">
         <de><![CDATA[Menü]]></de>
@@ -61,16 +66,14 @@
         <locale name="footer.social.text">
             <de><![CDATA[
                 <p>
-                    <a href="http://twitter.com/n33co">@n33co</a><br />
-                    <a href="http://dribbble.com/n33">dribbble.com/n33</a><br />
-                    <a href="#">facebook.com/untitled</a><br />
+                    <a href="http://twitter.com/PCSG_DEV">@PCSG_DEV</a><br />
+                    <a href="http://www.quiqqer.com/">www.quiqqer.com</a><br />
                 </p>
             ]]></de>
             <en><![CDATA[
                 <p>
-                    <a href="http://twitter.com/n33co">@n33co</a><br />
-                    <a href="http://dribbble.com/n33">dribbble.com/n33</a><br />
-                    <a href="#">facebook.com/untitled</a><br />
+                    <a href="http://twitter.com/PCSG_DEV">@PCSG_DEV</a><br />
+                    <a href="http://www.quiqqer.com/">www.quiqqer.com</a><br />
                 </p>
             ]]></en>
         </locale>

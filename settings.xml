@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template>
+
+    <!-- project settings -->
+    <project>
+        <settings name="html5up_escape_velocity">
+            <!-- config params -->
+            <config>
+                <section name="content">
+                    <conf name="left_content_recursive">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                </section>
+
+                <section name="contact">
+                    <conf name="showcontact">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="mailTo">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                </section>
+            </config>
+
+            <!-- config window -->
+            <window>
+                <categories>
+                    <category name="html5up_escape_velocity">
+                        <text>HTML5 UP Escape Velocity Template Einstellungen</text>
+
+                        <settings title="content" name="content">
+                            <title>Inhalts Einstellungen</title>
+                            <input conf="html5up_escape_velocity.content.left_content_recursive" type="checkbox">
+                                <text>Linken Inhalt rekursiv nach unten vererben</text>
+                            </input>
+                        </settings>
+
+                        <settings title="contact" name="contact">
+                            <title>Kontakt Einstellungen</title>
+                            <input conf="html5up_escape_velocity.contact.showcontact" type="checkbox">
+                                <text>Kontaktformular im Footer anzeigen</text>
+                            </input>
+                            <input conf="html5up_escape_velocity.contact.mailTo" type="text">
+                                <text>Empfangs E-Mail Adresse</text>
+                            </input>
+                        </settings>
+                    </category>
+                </categories>
+            </window>
+
+        </settings>
+    </project>
+
+    <wysiwyg id="content">
+        <css src="bin/css/style.css" />
+        <css src="bin/css/desktop.css" />
+        <css src="bin/css/sheet.css" />
+    </wysiwyg>
+
+</template>

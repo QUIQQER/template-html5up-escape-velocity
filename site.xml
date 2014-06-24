@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <!-- extend every panel -->
+    <window>
+        <tab name="extra_content" type="wysiwyg">
+            <text>Inhalt Links ( zweiter Inhalt )</text>
+            <image>icon-file-text-alt</image>
+        </tab>
+    </window>
+
+</site>
