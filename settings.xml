@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<template>
+<quiqqer>
 
     <!-- project settings -->
     <project>
@@ -60,4 +60,4 @@
         <css src="bin/css/sheet.css" />
     </wysiwyg>
 
-</template>
+</quiqqer>
