@@ -29,22 +29,44 @@
             <window>
                 <categories>
                     <category name="html5up_escape_velocity">
-                        <text>HTML5 UP Escape Velocity Template Einstellungen</text>
+                        <text>
+                            <locale group="quiqqer/template-html5up-escape-velocity" var="settings.title" />
+                        </text>
 
                         <settings title="content" name="content">
-                            <title>Inhalts Einstellungen</title>
+                            <title>
+                                <locale
+                                    group="quiqqer/template-html5up-escape-velocity"
+                                    var="content.settings.title" />
+                            </title>
                             <input conf="html5up_escape_velocity.content.left_content_recursive" type="checkbox">
-                                <text>Linken Inhalt rekursiv nach unten vererben</text>
+                                <text>
+                                    <locale
+                                        group="quiqqer/template-html5up-escape-velocity"
+                                        var="content.settings.left.content.text" />
+                                </text>
                             </input>
                         </settings>
 
                         <settings title="contact" name="contact">
-                            <title>Kontakt Einstellungen</title>
+                            <title>
+                                <locale
+                                    group="quiqqer/template-html5up-escape-velocity"
+                                    var="contact.settings.title" />
+                            </title>
                             <input conf="html5up_escape_velocity.contact.showcontact" type="checkbox">
-                                <text>Kontaktformular im Footer anzeigen</text>
+                                <text>
+                                    <locale
+                                        group="quiqqer/template-html5up-escape-velocity"
+                                        var="content.contact.showcontact.text" />
+                                </text>
                             </input>
                             <input conf="html5up_escape_velocity.contact.mailTo" type="text">
-                                <text>Empfangs E-Mail Adresse</text>
+                                <text>
+                                    <locale
+                                        group="quiqqer/template-html5up-escape-velocity"
+                                        var="content.contact.mailTo.text" />
+                                </text>
                             </input>
                         </settings>
                     </category>

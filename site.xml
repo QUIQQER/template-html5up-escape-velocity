@@ -4,7 +4,9 @@
     <!-- extend every panel -->
     <window>
         <tab name="extra_content" type="wysiwyg">
-            <text>Inhalt Links ( zweiter Inhalt )</text>
+            <text>
+                <locale group="quiqqer/template-html5up-escape-velocity" var="panel.category.text" />
+            </text>
             <image>icon-file-text-alt</image>
         </tab>
     </window>

@@ -20,6 +20,40 @@
         <en><![CDATA[Menu]]></en>
     </locale>
 
+    <locale name="panel.category.text">
+        <de><![CDATA[Inhalt Links ( zweiter Inhalt )]]></de>
+        <en><![CDATA[Content left ( second content )]]></en>
+    </locale>
+
+    <!-- settings -->
+    <locale name="settings.title">
+        <de><![CDATA[HTML5 UP Escape Velocity Template Einstellungen]]></de>
+        <en><![CDATA[HTML5 UP Escape Velocity Template settings]]></en>
+    </locale>
+
+    <locale name="content.settings.title">
+        <de><![CDATA[Inhalts Einstellungen]]></de>
+        <en><![CDATA[Content settings]]></en>
+    </locale>
+    <locale name="content.settings.left.content.text">
+        <de><![CDATA[Linken Inhalt rekursiv nach unten vererben.]]></de>
+        <en><![CDATA[Left content bequeath recursively down.]]></en>
+    </locale>
+
+    <locale name="contact.settings.title">
+        <de><![CDATA[Kontakt Einstellungen]]></de>
+        <en><![CDATA[Contact settings]]></en>
+    </locale>
+    <locale name="content.contact.showcontact.text">
+        <de><![CDATA[Kontaktformular im Footer anzeigen.]]></de>
+        <en><![CDATA[Show contact form in the footer.]]></en>
+    </locale>
+    <locale name="content.contact.mailTo.text">
+        <de><![CDATA[Empfangs E-Mail Adresse]]></de>
+        <en><![CDATA[Receive email address]]></en>
+    </locale>
+
+
 
     <!-- footer -->
         <locale name="footer.title">
