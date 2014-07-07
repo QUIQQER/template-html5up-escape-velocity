@@ -1232,6 +1232,10 @@ ol ol {
     margin-bottom: 0;
 }
 
+#nav li {
+    list-style-type: none;
+}
+
 .left-content {
     clear: both;
     padding-top: 40px;
