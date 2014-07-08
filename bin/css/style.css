@@ -1236,6 +1236,10 @@ ol ol {
     list-style-type: none;
 }
 
+#content p {
+    margin: 1em 0;
+}
+
 .left-content {
     clear: both;
     padding-top: 40px;
