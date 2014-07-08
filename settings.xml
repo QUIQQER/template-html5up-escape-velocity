@@ -78,7 +78,7 @@
 
     <wysiwyg id="content">
         <css src="bin/css/style.css" />
-        <css src="bin/css/desktop.css" />
+        <css src="bin/css/style-desktop.css" />
         <css src="bin/css/sheet.css" />
     </wysiwyg>
 

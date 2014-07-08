@@ -99,32 +99,7 @@
 
                                                 <!-- Sidebar -->
                                                     <div id="sidebar">
-                                                        {*
-                                                        {assign var=langs value=$Project->getAttribute('langs')}
-                                                        {if $langs}
-                                                        <section class="is">
-                                                            <header>
-                                                                <h2>
-                                                                    {t}quiqqer/template-html5up-escape-velocity lang.title{/t}
-                                                                </h2>
-                                                            </header>
-
-                                                            <ul>
-                                                            {foreach from=$langs item=lang}
-                                                                {if $Project->getLang() != $lang && $Site->existLang( $lang )}
-                                                                <li>
-                                                                    <a href="{url project=$Project->getName() lang=$lang id=$Site->getId( $lang )}">
-                                                                        {$lang}
-                                                                    </a>
-                                                                </li>
-                                                                {/if}
-                                                            {/foreach}
-                                                            </ul>
-                                                        </section>
-                                                        {/if}
-                                                        *}
-
-                                                        <section class="left-menu">
+                                                        <section class="left-menu hide-on-mobile">
                                                             <header>
                                                                 <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
                                                             </header>
