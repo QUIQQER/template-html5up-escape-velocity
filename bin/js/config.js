@@ -21,6 +21,10 @@ window._skel_panels_config = {
     preset: 'standard'
 };
 
+// quiqqer load
+require( QUIQQER_ONLOAD_MODULES )
+
+
 jQuery(function()
 {
     jQuery.fn.n33_formerize = function () {
