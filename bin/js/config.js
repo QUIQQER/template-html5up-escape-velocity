@@ -22,7 +22,7 @@ window._skel_panels_config = {
 };
 
 // quiqqer load
-require( QUIQQER_ONLOAD_MODULES )
+require( QUIQQER_ONLOAD_MODULES );
 
 
 jQuery(function()
