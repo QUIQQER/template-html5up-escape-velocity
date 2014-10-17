@@ -330,10 +330,8 @@
 
         #logo .byline
         {
-            margin: 1.25em 0 0 0;
+            margin: 0.5em 0 0 0;
             display: block;
-            letter-spacing: 0.2em;
-            font-size: 0.9em;
         }
 
 /*********************************************************************************/
