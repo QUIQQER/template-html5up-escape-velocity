@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
+    <groups name="quiqqer/template-html5up-escape-velocity" datatype="php,js">
+        <!-- general settings -->
+        <locale name="settings.general.title">
+            <de><![CDATA[Allgemeine Einstellungen]]></de>
+            <en><![CDATA[General settings]]></en>>
+        </locale>
+
+        <!-- logo settings -->
+        <locale name="settings.logo">
+            <de><![CDATA[Logo hochladen]]></de>
+            <en><![CDATA[Logo upload]]></en>>
+        </locale>
+    </groups>
+
     <groups name="quiqqer/template-html5up-escape-velocity" type="php">
 
     <!-- header -->
@@ -30,6 +44,14 @@
         <de><![CDATA[HTML5 UP Escape Velocity Template Einstellungen]]></de>
         <en><![CDATA[HTML5 UP Escape Velocity Template settings]]></en>
     </locale>
+
+
+
+
+
+
+
+
 
     <locale name="content.settings.title">
         <de><![CDATA[Inhalts Einstellungen]]></de>

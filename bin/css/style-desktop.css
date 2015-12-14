@@ -274,12 +274,12 @@
     #header-wrapper
     {
         padding: 0;
-        height: 400px;
+        min-height: 400px;
     }
 
         .homepage #header-wrapper
         {
-            height: 573px;
+            min-height: 573px;
         }
 
     #intro-wrapper
@@ -294,19 +294,19 @@
     #header
     {
         position: relative;
-        height: 400px;
+        min-height: 500px;
     }
 
         .homepage #header
         {
-            height: 573px;
+            min-height: 573px;
         }
 
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
 
-    #logo
+    /*#logo
     {
         position: absolute;
         height: 5em;
@@ -315,6 +315,18 @@
         width: 100%;
         text-align: center;
         margin-top: -0.5em;
+    }*/
+
+    #logo
+    {
+        position: relative;
+        height: 5em;
+        left: 0;
+        max-width: 100%;
+        text-align: center;
+        margin-top: -0.5em;
+
+        padding-top: 15%;
     }
 
         .homepage #logo

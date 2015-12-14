@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px" height="300px" viewBox="0 0 300 300" zoomAndPan="disable">
+    <style type="text/css"><![CDATA[
+		line
+		{
+			stroke: rgba(255,255,255,0.125);
+			stroke-width: 1px;
+		}
+    ]]></style>
+	<line x1="0" y1="0" x2="300" y2="300" />
+	<line x1="300" y1="0" x2="0" y2="300" />
+</svg>

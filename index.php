@@ -6,12 +6,34 @@
 
 \QUI\Utils\Site::setRecursivAttribute( $Site, 'image_emotion' );
 
+/**
+ * Project Logo
+ */
+
+$logo = false;
+$configLogo = $Project->getConfig('html5up-escape-velocity.settings.logo');
+
+if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
+    $logo = $configLogo;
+}
+
+/**
+ * own site type?
+ */
+
+$Engine->assign(array(
+    'logo'          => $logo,
+    'BricksManager' => \QUI\Bricks\Manager::init()
+));
+
+
+
 
 /**
  * Second content
  */
 
-if ( $Project->getConfig( 'html5up_escape_velocity.content.left_content_recursive' ) ) {
+if ( $Project->getConfig( 'html5up-escape-velocity.content.left_content_recursive' ) ) {
     \QUI\Utils\Site::setRecursivAttribute( $Site, 'extra_content' );
 }
 
@@ -26,7 +48,7 @@ $sendContact = function() use ($Project)
         return;
     }
 
-    $mailTo = $Project->getConfig('html5up_escape_velocity.contact.mailTo');
+    $mailTo = $Project->getConfig('html5up-escape-velocity.contact.mailTo');
 
     if ( empty( $mailTo ) ) {
         return;

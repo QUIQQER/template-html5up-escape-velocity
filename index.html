@@ -31,6 +31,21 @@
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/ie8.css" />
         <![endif]-->
 
+        <style>
+            #header-wrapper:before
+            {
+                background: url('{$URL_TPL_DIR}/bin/css/images/overlay.png');
+            }
+            .wrapper .title:before
+            {
+                background-image: url('{$URL_TPL_DIR}/bin/css/images/shadow.png');
+            }
+            .wrapper .title:after
+            {
+                background-image: url('{$URL_TPL_DIR}/bin/css/images/shadow.png');
+            }
+        </style>
+
     </head>
     <body class="left-sidebar">
 
@@ -38,7 +53,7 @@
             {image src=$Site->getAttribute('image_emotion') assign=emotionImage width=1900 onlysrc=true rewrited=true}
             <div id="header-wrapper"
                  class="wrapper"
-                 style="background-image: url('{$emotionImage}');"
+                 style="background-image: url('{$URL_TPL_DIR}bin/css/images/overlay.png'), url('{$emotionImage}');"
             >
                 <div class="container">
                     <div class="row">
@@ -47,16 +62,27 @@
                             <!-- Header -->
                                 <div id="header">
 
+                                    <!-- Nav -->
+                                    <nav id="nav">
+                                        {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
+                                    </nav>
+                                    <!-- /Nav -->
+
                                     <!-- Logo -->
                                         <div id="logo">
-                                            <h1 data-editable="true"
-                                                data-editAttribute="title"
-                                                data-project="{$Project->getName()}"
-                                                data-lang="{$Project->getLang()}"
-                                                data-id="{$Site->getId()}"
-                                            >
-                                                {$Site->getAttribute('title')}
-                                            </h1>
+                                            <div class="header-bar-inner-logo">
+                                                {if $logo}
+                                                <a href="{url id=1}" class="page-header-logo">
+                                                    {image src=$logo width=500 class="page-header-logo-img"}
+                                                </a>
+                                                {else}
+                                                <h1>
+                                                    <a href="{url id=1}" class="page-header-textlogo-link">
+                                                        {$Site->getAttribute( 'title' )}
+                                                    </a>
+                                                </h1>
+                                                {/if}
+                                            </div>
                                             <span class="byline"
                                                 data-editable="true"
                                                 data-editAttribute="short"
@@ -69,11 +95,7 @@
                                         </div>
                                     <!-- /Logo -->
 
-                                    <!-- Nav -->
-                                        <nav id="nav">
-                                            {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
-                                        </nav>
-                                    <!-- /Nav -->
+
 
                                 </div>
                             <!-- /Header -->
@@ -136,7 +158,7 @@
             </div>
         <!-- /Main Wrapper -->
 
-        {*
+
         <!-- Highlights Wrapper -->
             <div class="wrapper wrapper-style3">
                 <div class="title">The Endorsements</div>
@@ -188,7 +210,7 @@
                 </div>
             </div>
         <!-- /Highlights Wrapper -->
-        *}
+
 
         <!-- Footer Wrapper -->
             <div id="footer-wrapper" class="wrapper">

@@ -31,7 +31,7 @@
 
 	#header-wrapper
 	{
-		height: 400px !important;
+		min-height: 400px !important;
 	}
 
 	#intro-wrapper
@@ -54,7 +54,7 @@
 
 	#header
 	{
-		height: 400px !important;
+		min-height: 400px !important;
 	}
 
 /*********************************************************************************/

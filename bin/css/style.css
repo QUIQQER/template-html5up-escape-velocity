@@ -918,7 +918,6 @@
             left: -35px;
             width: 35px;
             height: 38px;
-            background: url('images/shadow.png');
         }
 
         .wrapper .title:after
@@ -929,7 +928,6 @@
             right: -35px;
             width: 35px;
             height: 38px;
-            background: url('images/shadow.png');
             -moz-transform: scaleX(-1);
             -webkit-transform: scaleX(-1);
             -o-transform: scaleX(-1);
@@ -939,8 +937,9 @@
 
     #header-wrapper
     {
-        background: url('../images/banner.jpg') center center;
-        background-size: cover;
+        background-position: center center, center center;
+        background-size: auto auto, cover;
+        background-attachment: scroll, scroll;
     }
 
         #header-wrapper:before
@@ -951,7 +950,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('images/overlay.png');
         }
 
     #footer-wrapper
@@ -1112,8 +1110,9 @@
 /* Logo                                                                          */
 /*********************************************************************************/
 
-    #logo
+    .page-header-logo-img
     {
+        max-width: 100%;
     }
 
         #logo h1
