@@ -17,14 +17,24 @@ if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
     $logo = $configLogo;
 }
 
+
 /**
  * own site type?
  */
 
 $Engine->assign(array(
-    'logo'          => $logo,
-    'BricksManager' => \QUI\Bricks\Manager::init()
+    'logo'                     => $logo,
+    'BricksManager'            => \QUI\Bricks\Manager::init(),
+    'showContact'              => $Project->getConfig('html5up-escape-velocity.footer.showcontact'),
+    'showVelocityFooter'       => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooter'),
+    'showVelocityFooterHeader' => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooterHeader'),
+    'ownSiteType'   =>
+        strpos($Site->getAttribute('type'), 'quiqqer/template-html5up-escape-velocity:') !== false
+            ? 1 : 0,
+    'quiTplType'    => $Project->getConfig('html5up-escape-velocity.settings.standardType'),
 ));
+
+
 
 
 

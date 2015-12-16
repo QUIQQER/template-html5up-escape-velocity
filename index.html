@@ -19,6 +19,8 @@
         <script src="{$URL_TPL_DIR}bin/js/skel.min.js"></script>
         <script src="{$URL_TPL_DIR}bin/js/skel-panels.min.js"></script>
 
+        {fontawesome}
+        {unsemantic}
         <noscript>
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/skel-noscript.css" />
             <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css" />
@@ -32,22 +34,32 @@
         <![endif]-->
 
         <style>
-            #header-wrapper:before
+            .wrapper,
+            .wrapper .title
             {
-                background: url('{$URL_TPL_DIR}/bin/css/images/overlay.png');
+                background-image: url('{$URL_TPL_DIR}/bin/css/images/overlay.png');
             }
-            .wrapper .title:before
-            {
-                background-image: url('{$URL_TPL_DIR}/bin/css/images/shadow.png');
+            .wrapper .title {
+                color: #484d55;
             }
+            .wrapper .title:before,
             .wrapper .title:after
             {
                 background-image: url('{$URL_TPL_DIR}/bin/css/images/shadow.png');
             }
+
+            .wrapper-style-prefix-even,
+            .wrapper-style-prefix-even .title {
+                background-color: #f3f3f3;
+            }
+            .wrapper-style-prefix-odd,
+            .wrapper-style-prefix-odd .title {
+                background-color: #e8e8e8;
+            }
         </style>
 
     </head>
-    <body class="left-sidebar">
+    <body>
 
         <!-- Header Wrapper -->
             {image src=$Site->getAttribute('image_emotion') assign=emotionImage width=1900 onlysrc=true rewrited=true}
@@ -62,11 +74,7 @@
                             <!-- Header -->
                                 <div id="header">
 
-                                    <!-- Nav -->
-                                    <nav id="nav">
-                                        {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
-                                    </nav>
-                                    <!-- /Nav -->
+
 
                                     <!-- Logo -->
                                         <div id="logo">
@@ -95,7 +103,11 @@
                                         </div>
                                     <!-- /Logo -->
 
-
+                                    <!-- Nav -->
+                                    <nav id="nav">
+                                        {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
+                                    </nav>
+                                    <!-- /Nav -->
 
                                 </div>
                             <!-- /Header -->
@@ -106,50 +118,32 @@
             </div>
         <!-- /Header Wrapper -->
 
+        <!-- header suffix -->
+            {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+            {foreach $headerSuffix as $Brick}
+            <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}">
+                <div class="title">{$Brick->getAttribute( 'title' )}</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+                            <section>
+                                {$Brick->create()}
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/foreach}
+
         <!-- Main Wrapper -->
             <div class="wrapper wrapper-style2">
-
+                <div class="title">{$Site->getAttribute( 'title' )}</div>
                 <div class="container">
                     <div class="row">
                         <div class="12u">
 
                             <!-- Main -->
-                                <div id="main">
-                                    <div>
-                                        <div class="row">
-                                            <div class="4u">
-
-                                                <!-- Sidebar -->
-                                                    <div id="sidebar">
-                                                        <section class="left-menu hide-on-mobile">
-                                                            <header>
-                                                                <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
-                                                            </header>
-                                                            {include file="`$TPL_DIR`lib/leftMenu.html"
-                                                                Site=$Project->firstChild()
-                                                                ActiveSite=$Site
-                                                            }
-                                                        </section>
-
-                                                        <section class="left-content">
-                                                            {$Site->getAttribute('extra_content')}
-                                                        </section>
-                                                    </div>
-                                                <!-- /Sidebar -->
-
-                                            </div>
-                                            <div class="8u skel-cell-important">
-
-                                                <!-- Content -->
-                                                    <div id="content">
-                                                        {$Template->getBody()}
-                                                    </div>
-                                                <!-- /Content -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            {$Template->getLayout()}
                             <!-- /Main -->
 
                         </div>
@@ -158,7 +152,25 @@
             </div>
         <!-- /Main Wrapper -->
 
+        <!-- footer prefix-->
+        {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
+        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+        {foreach $footerPrefix as $Brick}
+        <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}">
+        <div class="title">{$Brick->getAttribute( 'title' )}</div>
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+                    <section>
+                        {$Brick->create()}
+                    </section>
+                </div>
+            </div>
+        </div>
+        </div>
+        {/foreach}
 
+{*
         <!-- Highlights Wrapper -->
             <div class="wrapper wrapper-style3">
                 <div class="title">The Endorsements</div>
@@ -210,7 +222,7 @@
                 </div>
             </div>
         <!-- /Highlights Wrapper -->
-
+*}
 
         <!-- Footer Wrapper -->
             <div id="footer-wrapper" class="wrapper">
@@ -223,15 +235,20 @@
 
                             <!-- Footer -->
                                 <div id="footer">
-                                    <header class="style1">
-                                        <h2>{t}quiqqer/template-html5up-escape-velocity footer.header.title{/t}</h2>
-                                        <p class="byline">
-                                            {t}quiqqer/template-html5up-escape-velocity footer.header.text{/t}
-                                        </p>
-                                    </header>
+
+                                    {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+                                    {if !empty($footer)}
+                                    <section class="row">
+                                        {foreach from=$footer item=Brick}
+                                        {$Brick->addCSSClass('12u')}
+                                        {$Brick->create()}
+                                        {/foreach}
+                                    </section>
                                     <hr />
+                                    {/if}
+
+                                    {if $showVelocityFooter}
                                     <div>
-                                        {assign var=showContact value=$Project->getConfig('html5up_escape_velocity.contact.showcontact')}
                                         <div class="row">
                                             {if $showContact}
                                             <div class="6u" id="contact">
@@ -418,8 +435,9 @@
                                             {/if}
 
                                         </div>
+                                        <hr />
                                     </div>
-                                    <hr />
+                                    {/if}
                                 </div>
                             <!-- /Footer -->
 
@@ -427,7 +445,6 @@
                                 <div id="copyright">
                                     <span>
                                         &copy; {$smarty.now|date_format:"%Y"} {t}quiqqer/template-html5up-escape-velocity footer.copyright{/t}.
-                                        Design by <a href="http://html5up.net/" rel="nofollow">HTML5 UP</a>.
                                         System <a href="http://www.quiqqer.com">QUIQQER</a>.
                                     </span>
                                 </div>

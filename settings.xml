@@ -20,7 +20,11 @@
                     </conf>
                 </section>
 
-                <section name="contact">
+                <section name="footer">
+                    <conf name="showVelocityFooter">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
                     <conf name="showcontact">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
@@ -75,24 +79,37 @@
                             </input>
                         </settings>
 
-                        <settings title="contact" name="contact">
+                        <!-- Footer -->
+                        <settings title="footer" name="footer">
                             <title>
                                 <locale
                                     group="quiqqer/template-html5up-escape-velocity"
-                                    var="contact.settings.title" />
+                                    var="footer.settings.title" />
                             </title>
-                            <input conf="html5up-escape-velocity.contact.showcontact" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/template-html5up-escape-velocity"
+                                        var="content.footer.showVelocityFooter.description"
+                                        />
+                            </text>
+                            <input conf="html5up-escape-velocity.footer.showVelocityFooter" type="checkbox">
                                 <text>
                                     <locale
                                         group="quiqqer/template-html5up-escape-velocity"
-                                        var="content.contact.showcontact.text" />
+                                        var="content.footer.showVelocityFooter.text" />
                                 </text>
                             </input>
-                            <input conf="html5up-escape-velocity.contact.mailTo" type="text">
+                            <input conf="html5up-escape-velocity.footer.showcontact" type="checkbox">
                                 <text>
                                     <locale
                                         group="quiqqer/template-html5up-escape-velocity"
-                                        var="content.contact.mailTo.text" />
+                                        var="content.footer.showcontact.text" />
+                                </text>
+                            </input>
+                            <input conf="html5up-escape-velocity.footer.mailTo" type="text">
+                                <text>
+                                    <locale
+                                        group="quiqqer/template-html5up-escape-velocity"
+                                        var="content.footer.mailTo.text" />
                                 </text>
                             </input>
                         </settings>

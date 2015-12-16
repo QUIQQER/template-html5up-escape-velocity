@@ -1,0 +1,38 @@
+
+{assign var=bricks value=$BricksManager->getBricksByArea('noSidebarContent', $Site)}
+{assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
+{assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
+
+<div id="main">
+    <div class="row">
+
+        {if !empty( $prefixContentBricks )}
+        {foreach from=$prefixContentBricks item=Brick}
+        <section>
+            {$Brick->create()}
+        </section>
+        {/foreach}
+        {/if}
+
+
+        {foreach from=$bricks item=Brick}
+        <section>
+            {$Brick->create()}
+        </section>
+        {/foreach}
+
+        <!-- Content -->
+        <div id="content">
+            {$Template->getBody()}
+        </div>
+        <!-- /Content -->
+
+        {if !empty( $suffixContentBricks )}
+        {foreach from=$suffixContentBricks item=Brick}
+        <section>
+            {$Brick->create()}
+        </section>
+        {/foreach}
+        {/if}
+    </div>
+</div>

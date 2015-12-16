@@ -2,6 +2,125 @@
 <locales>
 
     <groups name="quiqqer/template-html5up-escape-velocity" datatype="php,js">
+
+        <!-- layouts -->
+        <locale name="admin.layout.leftSidebar">
+            <de><![CDATA[Linke Sidebar]]></de>
+            <en><![CDATA[Left sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.startpage">
+            <de><![CDATA[Landingpage (Startpage)]]></de>
+            <en><![CDATA[Landingpage (Startpage)]]></en>
+        </locale>
+        <locale name="admin.layout.rightSidebar">
+            <de><![CDATA[Rechte Sidebar]]></de>
+            <en><![CDATA[Right sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.noSidebar">
+            <de><![CDATA[Keine Sidebar]]></de>
+            <en><![CDATA[No sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.leftSidebar.description">
+            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="admin.layout.startpage.description">
+            <de><![CDATA[Standardmäßig Layout der Startseite ]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+
+        <!-- areas -->
+        <locale name="area.footer.title">
+            <de><![CDATA[Footer Bausteinzone]]></de>
+            <en><![CDATA[Footer brickarea]]></en>
+        </locale>
+        <locale name="area.footer.description">
+            <de><![CDATA[Bausteinzone des Footer]]></de>
+            <en><![CDATA[Brickarea of the footer]]></en>
+        </locale>
+
+        <locale name="area.startpageContent.title">
+            <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
+            <en><![CDATA[Content area (Landingpage)]]></en>
+        </locale>
+        <locale name="area.startpageContent.description">
+            <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
+            <en><![CDATA[Brickarea of a landingpage layout]]></en>
+        </locale>
+
+        <locale name="area.sidebar.left.title">
+            <de><![CDATA[Linke Bausteinzone]]></de>
+            <en><![CDATA[Left brickarea]]></en>
+        </locale>
+        <locale name="area.sidebar.left.description">
+            <de><![CDATA[Bausteinzone links neben dem Inhalt]]></de>
+            <en><![CDATA[Brickarea to the left of the content]]></en>
+        </locale>
+
+        <locale name="area.sidebar.right.title">
+            <de><![CDATA[Rechte Bausteinzone]]></de>
+            <en><![CDATA[Right brickarea]]></en>
+        </locale>
+        <locale name="area.sidebar.right.description">
+            <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
+            <en><![CDATA[Brickarea to the right of the content]]></en>
+        </locale>
+
+        <locale name="area.noSidebar.title">
+            <de><![CDATA[Inhaltszone (Keine Sidebar)]]></de>
+            <en><![CDATA[Content area (No Sidebar)]]></en>
+        </locale>
+        <locale name="area.noSidebar.description">
+            <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
+            <en><![CDATA[Content area of no sidebar layout]]></en>
+        </locale>
+
+        <locale name="area.startpage.title">
+            <de><![CDATA[Inhaltszone (Startpage)]]></de>
+            <en><![CDATA[Content area (Start page)]]></en>
+        </locale>
+        <locale name="area.startpage.description">
+            <de><![CDATA[Inhaltszone eines Start-Page-Layouts]]></de>
+            <en><![CDATA[Content area of no start page layout]]></en>
+        </locale>
+
+        <locale name="area.sidebar.prefix.content.title">
+            <de><![CDATA[Prefix Zone]]></de>
+            <en><![CDATA[Prefix area]]></en>
+        </locale>
+        <locale name="area.sidebar.prefix.content.description">
+            <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
+            <en><![CDATA[Brickarea before the content]]></en>
+        </locale>
+
+        <locale name="area.sidebar.suffix.content.title">
+            <de><![CDATA[Suffix Zone]]></de>
+            <en><![CDATA[Suffix area]]></en>
+        </locale>
+        <locale name="area.sidebar.suffix.content.description">
+            <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
+            <en><![CDATA[Brickarea after the content]]></en>
+        </locale>
+
+        <locale name="area.headerSuffix.title">
+            <de><![CDATA[Header Suffix]]></de>
+            <en><![CDATA[Header suffix]]></en>
+        </locale>
+        <locale name="area.headerSuffix.description">
+            <de><![CDATA[Bausteinzone nach dem Header]]></de>
+            <en><![CDATA[Brickarea after the header]]></en>
+        </locale>
+
+        <locale name="area.footerPrefix.title">
+            <de><![CDATA[Footer Prefix]]></de>
+            <en><![CDATA[Footer Prefix]]></en>
+        </locale>
+        <locale name="area.footerPrefix.description">
+            <de><![CDATA[Bausteinzone vor dem Footer]]></de>
+            <en><![CDATA[Brickarea before the footer]]></en>
+        </locale>
+
+
         <!-- general settings -->
         <locale name="settings.general.title">
             <de><![CDATA[Allgemeine Einstellungen]]></de>
@@ -53,27 +172,37 @@
 
 
 
-    <locale name="content.settings.title">
-        <de><![CDATA[Inhalts Einstellungen]]></de>
-        <en><![CDATA[Content settings]]></en>
-    </locale>
-    <locale name="content.settings.left.content.text">
-        <de><![CDATA[Linken Inhalt rekursiv nach unten vererben.]]></de>
-        <en><![CDATA[Left content bequeath recursively down.]]></en>
-    </locale>
+        <locale name="content.settings.title">
+            <de><![CDATA[Inhalts Einstellungen]]></de>
+            <en><![CDATA[Content settings]]></en>
+        </locale>
+        <locale name="content.settings.left.content.text">
+            <de><![CDATA[Linken Inhalt rekursiv nach unten vererben.]]></de>
+            <en><![CDATA[Left content bequeath recursively down.]]></en>
+        </locale>
 
-    <locale name="contact.settings.title">
-        <de><![CDATA[Kontakt Einstellungen]]></de>
-        <en><![CDATA[Contact settings]]></en>
-    </locale>
-    <locale name="content.contact.showcontact.text">
-        <de><![CDATA[Kontaktformular im Footer anzeigen.]]></de>
-        <en><![CDATA[Show contact form in the footer.]]></en>
-    </locale>
-    <locale name="content.contact.mailTo.text">
-        <de><![CDATA[Empfangs E-Mail Adresse]]></de>
-        <en><![CDATA[Receive email address]]></en>
-    </locale>
+
+    <!-- velocity footer settings -->
+        <locale name="footer.settings.title">
+            <de><![CDATA[Template Velocity Footer Einstellungen]]></de>
+            <en><![CDATA[Template Velocity footer settings]]></en>
+        </locale>
+        <locale name="content.footer.showVelocityFooter.description">
+            <de><![CDATA[Hinweis: Alle Texte bitte über die Sprachvariable einpflegen]]></de>
+            <en><![CDATA[Please note: type the footer texts on language variables]]></en>
+        </locale>
+        <locale name="content.footer.showVelocityFooter.text">
+            <de><![CDATA[Velocity Footer anzeigen]]></de>
+            <en><![CDATA[Show Velocity footer]]></en>
+        </locale>
+        <locale name="content.footer.showcontact.text">
+            <de><![CDATA[Kontaktformular im Footer anzeigen.]]></de>
+            <en><![CDATA[Show contact form in the footer.]]></en>
+        </locale>
+        <locale name="content.footer.mailTo.text">
+            <de><![CDATA[Empfangs E-Mail Adresse]]></de>
+            <en><![CDATA[Receive email address]]></en>
+        </locale>
 
 
 

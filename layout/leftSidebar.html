@@ -1,0 +1,64 @@
+
+{assign var=leftSideBar value=$BricksManager->getBricksByArea('leftSidebar', $Site)}
+{assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
+{assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
+
+<div id="main">
+    <div>
+        <div class="row">
+            <div class="4u">
+
+                <!-- Sidebar -->
+                <div id="sidebar">
+
+
+                    {if !empty( $leftSideBar )}
+                    {foreach from=$leftSideBar item=Brick}
+                    <section>
+                        {$Brick->create()}
+                    </section>
+                    {/foreach}
+                    {else}
+                    &nbsp;
+                    {/if}
+                    <section class="left-menu hide-on-mobile">
+                        <header>
+                            <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
+                        </header>
+                        {include file="`$TPL_DIR`lib/leftMenu.html"
+                        Site=$Project->firstChild()
+                        ActiveSite=$Site
+                        }
+                    </section>
+
+                </div>
+                <!-- /Sidebar -->
+
+            </div>
+            <div class="8u skel-cell-important">
+
+                {if !empty( $prefixContentBricks )}
+                {foreach from=$prefixContentBricks item=Brick}
+                <section class="">
+                    {$Brick->create()}
+                </section>
+                {/foreach}
+                {/if}
+
+                <!-- Content -->
+                <div id="content">
+                    {$Template->getBody()}
+                </div>
+                <!-- /Content -->
+
+                {if !empty( $suffixContentBricks )}
+                {foreach from=$suffixContentBricks item=Brick}
+                <section>
+                    {$Brick->create()}
+                </section>
+                {/foreach}
+                {/if}
+            </div>
+        </div>
+    </div>
+</div>
