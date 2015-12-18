@@ -11,6 +11,11 @@
                     <conf name="logo">
                         <type><![CDATA[string]]></type>
                     </conf>
+
+                    <conf name="showSiteTitle">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
                 </section>
 
                 <section name="content">
@@ -58,6 +63,15 @@
                                 <text>
                                     <locale group="quiqqer/template-html5up-escape-velocity"
                                             var="settings.logo"
+                                    />
+                                </text>
+                            </input>
+
+                            <!-- Show site title? -->
+                            <input conf="html5up-escape-velocity.settings.showSiteTitle" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="settings.showSiteTitle"
                                     />
                                 </text>
                             </input>

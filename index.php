@@ -28,6 +28,7 @@ $Engine->assign(array(
     'showContact'              => $Project->getConfig('html5up-escape-velocity.footer.showcontact'),
     'showVelocityFooter'       => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooter'),
     'showVelocityFooterHeader' => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooterHeader'),
+    'showSiteTitle'            => $Project->getConfig('html5up-escape-velocity.settings.showSiteTitle'),
     'ownSiteType'   =>
         strpos($Site->getAttribute('type'), 'quiqqer/template-html5up-escape-velocity:') !== false
             ? 1 : 0,

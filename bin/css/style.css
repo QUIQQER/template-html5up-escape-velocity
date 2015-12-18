@@ -2,17 +2,6 @@
 
 @import "sheet.css";
 
-@font-face {
-    font-family:'FontAwesome';
-    src:url('font/fontawesome-webfont.eot?v=4.0.1');
-    src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),
-        url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),
-        url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),
-        url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
-
-    font-weight:normal;font-style:normal
-}
-
 /*
     Escape Velocity 2.5 by HTML5 UP
     html5up.net | @n33co
@@ -347,7 +336,7 @@
 
         .button-style1
         {
-            background: #e97770 url('images/overlay.png');
+            background-color: #e97770;
             color: #fff;
         }
 
@@ -380,7 +369,7 @@
 
         .button-style3
         {
-            background: #2f333b url('images/overlay.png');
+            background-color: #2f333b;
             color: #fff;
         }
 
@@ -456,7 +445,7 @@
                 position: relative;
                 display: inline-block;
                 color: #fff;
-                background: #2f333b url('images/overlay.png');
+                background-color: #2f333b;
                 border-radius: 1em;
                 text-align: center;
             }
@@ -905,9 +894,15 @@
             left: 50%;
             text-align: center;
             text-transform: uppercase;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
             display: block;
             font-weight: 700;
             letter-spacing: 0.25em;
+            overflow: hidden;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            white-space: nowrap;
         }
 
         .wrapper .title:before
@@ -1113,6 +1108,7 @@
     .page-header-logo-img
     {
         max-width: 100%;
+        max-height: 150px;
     }
 
         #logo h1

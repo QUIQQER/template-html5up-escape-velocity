@@ -18,6 +18,11 @@
     },
 
     "require": {
-        "quiqqer/quiqqer" : "*@dev"
+        "quiqqer/quiqqer" : "*@dev",
+        "quiqqer/buttons": "*@dev",
+        "quiqqer/bricks": "*@dev",
+        "quiqqer/menu": "*@dev",
+        "quiqqer/unsemantic": "*@dev",
+        "quiqqer/fontawesome": "*@dev"
     }
 }

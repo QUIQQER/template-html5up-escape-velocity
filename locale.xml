@@ -132,6 +132,12 @@
             <de><![CDATA[Logo hochladen]]></de>
             <en><![CDATA[Logo upload]]></en>>
         </locale>
+
+        <!-- Show site title? -->
+        <locale name="settings.showSiteTitle">
+            <de><![CDATA[Seitenüberschrift über dem Hauptinhalt anzeigen]]></de>
+            <en><![CDATA[Show site title above the main content]]></en>>
+        </locale>
     </groups>
 
     <groups name="quiqqer/template-html5up-escape-velocity" type="php">
