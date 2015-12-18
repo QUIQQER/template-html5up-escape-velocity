@@ -16,6 +16,10 @@
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
+                    <conf name="showSiteTitleOnHeader">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
                 </section>
 
                 <section name="content">
@@ -75,6 +79,14 @@
                                     />
                                 </text>
                             </input>
+                            <input conf="html5up-escape-velocity.settings.showSiteTitleOnHeader" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="settings.showSiteTitleOnHeader"
+                                    />
+                                </text>
+                            </input>>
+
                         </settings>
 
                         <settings title="content" name="content">

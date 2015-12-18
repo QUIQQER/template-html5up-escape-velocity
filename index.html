@@ -88,7 +88,8 @@
                                                 <a href="{url id=1}" class="page-header-logo">
                                                     {image src=$logo width=500 class="page-header-logo-img"}
                                                 </a>
-                                                {else}
+                                                {/if}
+                                                {if $showSiteTitleOnHeader}
                                                 <h1>
                                                     <a href="{url id=1}" class="page-header-textlogo-link">
                                                         {$Site->getAttribute( 'title' )}
