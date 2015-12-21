@@ -22,6 +22,25 @@
                     </conf>
                 </section>
 
+                <section name="headerSettings">
+                    <conf name="minHeaderNoSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="minHeaderLeftSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="minHeaderRightSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                </section>
+
+                <section name="colorSettings">
+                    <conf name="colorMain">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#e97770</defaultvalue>
+                    </conf>
+                </section>
+
                 <section name="content">
                     <conf name="left_content_recursive">
                         <type><![CDATA[bool]]></type>
@@ -87,6 +106,62 @@
                                 </text>
                             </input>>
 
+                        </settings>
+
+                        <!-- Small header? -->
+                        <settings title="headerSettings" name="headerSettings">
+                            <title>
+                                <locale group="quiqqer/template-html5up-escape-velocity" var="html5up-escape-velocity.header.settings.text" />
+                            </title>
+
+                            <input conf="html5up-escape-velocity.headerSettings.minHeaderNoSidebar" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderNoSidebar.text" />
+                                </text>
+                                <description><locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderNoSidebar.description" /></description>
+                            </input>
+                            <input conf="html5up-escape-velocity.headerSettings.minHeaderLeftSidebar" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderLeftSidebar.text" />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderLeftSidebar.description" />
+                                </description>
+                            </input>
+                            <input conf="html5up-escape-velocity.headerSettings.minHeaderRightSidebar" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderRightSidebar.text" />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderRightSidebar.description" />
+                                </description>
+                            </input>
+                        </settings>
+
+                        <!-- Colors -->
+                        <settings title="colorSettings"
+                                  name="colorSettings">
+                            <title>
+                                <locale group="quiqqer/template-template-html5up-escape-velocity"
+                                        var="colorSettings.title"
+                                />
+                            </title>
+
+                            <input conf="html5up-escape-velocity.colorSettings.colorMain"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="colorSettings.colorMain.text"
+                                    />
+                                </text>
+                                <!--
+                                <description>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="colorSettings.colorMain.description"
+                                    />
+                                </description>
+                                -->
+                            </input>
                         </settings>
 
                         <settings title="content" name="content">

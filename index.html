@@ -34,6 +34,11 @@
         <![endif]-->
 
         <style>
+
+            a:hover {
+                color: {$colorMain};
+            }
+            
             .wrapper,
             .wrapper .title,
             .button-style1,
@@ -65,21 +70,20 @@
 
     </head>
     <body>
-
         <!-- Header Wrapper -->
             {image src=$Site->getAttribute('image_emotion') assign=emotionImage width=1900 onlysrc=true rewrited=true}
-            <div id="header-wrapper"
+            <div id="header-wrapper" class="{if $minHeader} minHeader{/if}"
                  class="wrapper"
-                 style="background-image: url('{$URL_TPL_DIR}bin/css/images/overlay.png'), url('{$emotionImage}');"
+                 style="background-image: url('{$URL_TPL_DIR}bin/css/images/overlay.png'), url('{$emotionImage}');
+                 {if $minHeader} height: 300px !important{/if};
+                 "
             >
                 <div class="container">
                     <div class="row">
                         <div class="12u">
 
                             <!-- Header -->
-                                <div id="header">
-
-
+                                <div id="header" style="{if $minHeader} height: 300px !important{/if};">
 
                                     <!-- Logo -->
                                         <div id="logo">
@@ -127,7 +131,9 @@
         <!-- header suffix -->
             {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
             {foreach $headerSuffix as $Brick}
-            <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}">
+            <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}"
+                    {if $Brick->getType() == "QUI\Controls\Breadcrumb"} style="padding-top: 3em; padding-bottom: 3em;"{/if}
+                    >
                 {if $Brick->getAttribute( 'title' )}
                     <div class="title">{$Brick->getAttribute( 'title' )}</div>
                 {/if}
@@ -135,6 +141,7 @@
                     <div class="row">
                         <div class="12u">
                             <section>
+
                                 {$Brick->create()}
                             </section>
                         </div>
@@ -144,9 +151,9 @@
             {/foreach}
 
         <!-- Main Wrapper -->
-            <div class="wrapper wrapper-style2">
+            <div class="wrapper wrapper-style2" style="background-image: none">
                 {if $showSiteTitle}
-                    <div class="title">{$Site->getAttribute( 'title' )}</div>
+                    <div class="title" style="background-image: none">{$Site->getAttribute( 'title' )}</div>
                 {/if}
                 <div class="container">
                     <div class="row">

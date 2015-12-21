@@ -17,7 +17,39 @@ if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
     $logo = $configLogo;
 }
 
+/**
+ * min header ?
+ */
 
+$minHeader = false;
+
+switch ($Template->getLayoutType()) {
+    case 'layout/rightSidebar':
+        $minHeader = $Project->getConfig('html5up-escape-velocity.headerSettings.minHeaderRightSidebar');
+        break;
+
+    case 'layout/leftSidebar':
+        $minHeader = $Project->getConfig('html5up-escape-velocity.headerSettings.minHeaderLeftSidebar');
+        break;
+
+    case 'layout/noSidebar':
+        $minHeader = $Project->getConfig('html5up-escape-velocity.headerSettings.minHeaderNoSidebar');
+        break;
+
+}
+
+/**
+ * colors
+ */
+
+$colorMain = '#e97770';
+
+if ($Project->getConfig('html5up-escape-velocity.colorSettings.colorMain')) {
+    $colorMain = $Project->getConfig('html5up-escape-velocity.colorSettings.colorMain');
+}
+
+
+echo $Project->getConfig('html5up-escape-velocity.settings.minHeaderLeftSidebar');
 /**
  * own site type?
  */
@@ -30,6 +62,8 @@ $Engine->assign(array(
     'showVelocityFooterHeader' => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooterHeader'),
     'showSiteTitle'            => $Project->getConfig('html5up-escape-velocity.settings.showSiteTitle'),
     'showSiteTitleOnHeader'    => $Project->getConfig('html5up-escape-velocity.settings.showSiteTitleOnHeader'),
+    'minHeader'                => $minHeader,
+    'colorMain'                => $colorMain,
     'ownSiteType'   =>
         strpos($Site->getAttribute('type'), 'quiqqer/template-html5up-escape-velocity:') !== false
             ? 1 : 0,
