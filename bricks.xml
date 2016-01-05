@@ -2,6 +2,16 @@
 <quiqqer>
     <bricks>
 
+        <!-- for all bricks -->
+        <brick control="*">
+            <settings>
+                <setting name="showBrickTitle">
+                    <locale group="quiqqer/template-html5up-escape-velocity"
+                            var="brick.control.navigation.setting.showBrickTitle"/>
+                </setting>
+            </settings>
+        </brick>
+
         <!-- defined areas in the template -->
         <templateAreas>
             <!-- global areas -->

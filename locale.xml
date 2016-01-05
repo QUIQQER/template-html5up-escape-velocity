@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
+
     <groups name="quiqqer/template-html5up-escape-velocity" datatype="php,js">
+
+
+        <!-- global settings -->
+        <locale name="brick.control.navigation.setting.showBrickTitle">
+            <de><![CDATA[Titel anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+        </locale>
 
         <!-- layouts -->
         <locale name="admin.layout.leftSidebar">
@@ -134,51 +142,56 @@
         </locale>
 
         <!-- Show site title? -->
-        <locale name="settings.showSiteTitle">
-            <de><![CDATA[Seitenüberschrift über dem Hauptinhalt anzeigen]]></de>
-            <en><![CDATA[Show site title above the main content]]></en>>
+        <locale name="settings.showSiteContentTitle">
+            <de><![CDATA[Hauptinhalsttitel anzeigen (Seitenüberschrift)]]></de>
+            <en><![CDATA[Show main content title (site title)]]></en>>
         </locale>
-        <locale name="settings.showSiteTitleOnHeader">
-            <de><![CDATA[Seitenüberschrift im Headerbereich anzeigen]]></de>
-            <en><![CDATA[Show site title on header area]]></en>>
+        <locale name="settings.showSiteFooterTitle">
+            <de><![CDATA[Footertitel anzeigen]]></de>
+            <en><![CDATA[Show footer title ]]></en>>
         </locale>
+        <locale name="settings.showSiteFooterTitle.description">
+            <de><![CDATA[Der Titel muss als Sprachvariable gesetzt werden.]]></de>
+            <en><![CDATA[The title have to be written as lang variable.]]></en>>
+        </locale>
+
     </groups>
 
     <groups name="quiqqer/template-html5up-escape-velocity" type="php">
 
-    <!-- header -->
-    <locale name="header.menu.home.title">
-        <de><![CDATA[Home]]></de>
-        <en><![CDATA[Home]]></en>
-    </locale>
+        <!-- header -->
+        <locale name="header.menu.home.title">
+            <de><![CDATA[Home]]></de>
+            <en><![CDATA[Home]]></en>
+        </locale>
 
-    <locale name="lang.title">
-        <de><![CDATA[Sprache wechseln]]></de>
-        <en><![CDATA[Change Language]]></en>
-    </locale>
+        <locale name="lang.title">
+            <de><![CDATA[Sprache wechseln]]></de>
+            <en><![CDATA[Change Language]]></en>
+        </locale>
 
-    <!-- menu -->
-    <locale name="menu.title">
-        <de><![CDATA[Menü]]></de>
-        <en><![CDATA[Menu]]></en>
-    </locale>
+        <!-- menu -->
+        <locale name="menu.title">
+            <de><![CDATA[Menü]]></de>
+            <en><![CDATA[Menu]]></en>
+        </locale>
 
-    <locale name="panel.category.text">
-        <de><![CDATA[Inhalt Links ( zweiter Inhalt )]]></de>
-        <en><![CDATA[Content left ( second content )]]></en>
-    </locale>
+        <locale name="panel.category.text">
+            <de><![CDATA[Inhalt Links ( zweiter Inhalt )]]></de>
+            <en><![CDATA[Content left ( second content )]]></en>
+        </locale>
 
-    <!-- settings -->
-    <locale name="settings.title">
-        <de><![CDATA[HTML5 UP Escape Velocity Template Einstellungen]]></de>
-        <en><![CDATA[HTML5 UP Escape Velocity Template settings]]></en>
-    </locale>
+        <!-- settings -->
+        <locale name="settings.title">
+            <de><![CDATA[HTML5 UP Escape Velocity Template Einstellungen]]></de>
+            <en><![CDATA[HTML5 UP Escape Velocity Template settings]]></en>
+        </locale>
 
 
         <!-- header settings -->
         <locale name="html5up-escape-velocity.header.settings.text">
-            <de><![CDATA[Header Größe einstellen.]]></de>
-            <en><![CDATA[Set the height of the header.]]></en>
+            <de><![CDATA[Header Größe]]></de>
+            <en><![CDATA[height of the header]]></en>
         </locale>
 
         <locale name="minHeaderNoSidebar.text">
@@ -208,10 +221,10 @@
             <en><![CDATA[Activate small header for right sidebar layout.]]></en>
         </locale>
 
-        <!-- color settings -->
+         <!-- color settings -->
         <locale name="colorSettings.title">
-            <de><![CDATA[Farbverwaltung]]></de>
-            <en><![CDATA[Color management]]></en>
+            <de><![CDATA[Farbeinstellungen]]></de>
+            <en><![CDATA[Color settings]]></en>
         </locale>
         <locale name="colorSettings.colorMain.text">
             <de><![CDATA[Hauptfarbe]]></de>
@@ -220,27 +233,14 @@
 
 
 
-
-
-
-        <locale name="content.settings.title">
-            <de><![CDATA[Inhalts Einstellungen]]></de>
-            <en><![CDATA[Content settings]]></en>
-        </locale>
-        <locale name="content.settings.left.content.text">
-            <de><![CDATA[Linken Inhalt rekursiv nach unten vererben.]]></de>
-            <en><![CDATA[Left content bequeath recursively down.]]></en>
-        </locale>
-
-
-    <!-- velocity footer settings -->
+         <!-- velocity footer settings -->
         <locale name="footer.settings.title">
             <de><![CDATA[Template Velocity Footer Einstellungen]]></de>
             <en><![CDATA[Template Velocity footer settings]]></en>
         </locale>
         <locale name="content.footer.showVelocityFooter.description">
-            <de><![CDATA[Hinweis: Alle Texte bitte über die Sprachvariable einpflegen]]></de>
-            <en><![CDATA[Please note: type the footer texts on language variables]]></en>
+            <de><![CDATA[Hinweis: Alle Texte bitte als Sprachvariable einpflegen.]]></de>
+            <en><![CDATA[Please note: type the footer texts on language variables.]]></en>
         </locale>
         <locale name="content.footer.showVelocityFooter.text">
             <de><![CDATA[Velocity Footer anzeigen]]></de>
@@ -257,7 +257,7 @@
 
 
 
-    <!-- footer -->
+        <!-- footer -->
         <locale name="footer.title">
             <de><![CDATA[Footer]]></de>
             <en><![CDATA[Footer]]></en>

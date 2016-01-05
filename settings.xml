@@ -12,13 +12,13 @@
                         <type><![CDATA[string]]></type>
                     </conf>
 
-                    <conf name="showSiteTitle">
+                    <conf name="showSiteContentTitle">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="showSiteTitleOnHeader">
+                    <conf name="showSiteFooterTitle">
                         <type><![CDATA[bool]]></type>
-                        <defaultvalue>0</defaultvalue>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                 </section>
 
@@ -38,13 +38,6 @@
                     <conf name="colorMain">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#e97770</defaultvalue>
-                    </conf>
-                </section>
-
-                <section name="content">
-                    <conf name="left_content_recursive">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
                     </conf>
                 </section>
 
@@ -91,20 +84,25 @@
                             </input>
 
                             <!-- Show site title? -->
-                            <input conf="html5up-escape-velocity.settings.showSiteTitle" type="checkbox">
+                            <input conf="html5up-escape-velocity.settings.showSiteContentTitle" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-html5up-escape-velocity"
-                                            var="settings.showSiteTitle"
+                                            var="settings.showSiteContentTitle"
                                     />
                                 </text>
                             </input>
-                            <input conf="html5up-escape-velocity.settings.showSiteTitleOnHeader" type="checkbox">
+                            <input conf="html5up-escape-velocity.settings.showSiteFooterTitle" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-html5up-escape-velocity"
-                                            var="settings.showSiteTitleOnHeader"
+                                            var="settings.showSiteFooterTitle"
                                     />
                                 </text>
-                            </input>>
+                                <description>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="settings.showSiteFooterTitle.description"
+                                    />
+                                </description>
+                            </input>
 
                         </settings>
 
@@ -142,7 +140,7 @@
                         <settings title="colorSettings"
                                   name="colorSettings">
                             <title>
-                                <locale group="quiqqer/template-template-html5up-escape-velocity"
+                                <locale group="quiqqer/template-html5up-escape-velocity"
                                         var="colorSettings.title"
                                 />
                             </title>
@@ -153,29 +151,6 @@
                                     <locale group="quiqqer/template-html5up-escape-velocity"
                                             var="colorSettings.colorMain.text"
                                     />
-                                </text>
-                                <!--
-                                <description>
-                                    <locale group="quiqqer/template-html5up-escape-velocity"
-                                            var="colorSettings.colorMain.description"
-                                    />
-                                </description>
-                                -->
-                            </input>
-                        </settings>
-
-                        <settings title="content" name="content">
-
-                            <title>
-                                <locale
-                                    group="quiqqer/template-html5up-escape-velocity"
-                                    var="content.settings.title" />
-                            </title>
-                            <input conf="html5up-escape-velocity.content.left_content_recursive" type="checkbox">
-                                <text>
-                                    <locale
-                                        group="quiqqer/template-html5up-escape-velocity"
-                                        var="content.settings.left.content.text" />
                                 </text>
                             </input>
                         </settings>

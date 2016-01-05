@@ -60,8 +60,8 @@ $Engine->assign(array(
     'showContact'              => $Project->getConfig('html5up-escape-velocity.footer.showcontact'),
     'showVelocityFooter'       => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooter'),
     'showVelocityFooterHeader' => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooterHeader'),
-    'showSiteTitle'            => $Project->getConfig('html5up-escape-velocity.settings.showSiteTitle'),
-    'showSiteTitleOnHeader'    => $Project->getConfig('html5up-escape-velocity.settings.showSiteTitleOnHeader'),
+    'showSiteContentTitle'     => $Project->getConfig('html5up-escape-velocity.settings.showSiteContentTitle'),
+    'showSiteFooterTitle'      => $Project->getConfig('html5up-escape-velocity.settings.showSiteFooterTitle'),
     'minHeader'                => $minHeader,
     'colorMain'                => $colorMain,
     'ownSiteType'   =>

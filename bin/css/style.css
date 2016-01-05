@@ -348,7 +348,7 @@
 
             .button-style1:hover
             {
-                background-color: #f98780;
+                opacity: 0.8;
             }
 
             .button-style1:active
@@ -441,10 +441,10 @@
     {
     }
 
-        .feature-list h3
+        /*.feature-list h3
         {
             color: #e97770 !important;
-        }
+        }*/
 
             .feature-list h3:before
             {
