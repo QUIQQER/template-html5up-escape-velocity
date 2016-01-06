@@ -21,11 +21,13 @@
                     {else}
                     &nbsp;
                     {/if}
+
+
                     <section class="left-menu hide-on-mobile">
                         <header>
                             <h2>{t}quiqqer/template-html5up-escape-velocity menu.title{/t}</h2>
                         </header>
-                        {include file="`$TPL_DIR`lib/leftMenu.html"
+                        {include file="`$TPL_DIR`template/leftMenu.html"
                         Site=$Project->firstChild()
                         ActiveSite=$Site
                         }

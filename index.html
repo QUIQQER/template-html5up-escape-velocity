@@ -1,4 +1,8 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{$Project->getAttribute('lang')}"> <!--<![endif]-->
 <!--
     Escape Velocity 2.5 by HTML5 UP
     html5up.net | @n33co
@@ -7,8 +11,9 @@
 <html>
     <head>
 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1" />
+        {assign var=layoutType value=$Template->getLayoutType()}
         {$Template->getHeader()}
         {fontawesome}
         {unsemantic}
@@ -52,9 +57,11 @@
             {
                 background-image: url('{$URL_TPL_DIR}/bin/css/images/overlay.png');
             }
+
             .wrapper .title {
                 color: #484d55;
             }
+
             .wrapper .title:before,
             .wrapper .title:after
             {
@@ -65,6 +72,7 @@
             .wrapper-style-prefix-even .title {
                 background-color: #f3f3f3;
             }
+
             .wrapper-style-prefix-odd,
             .wrapper-style-prefix-odd .title {
                 background-color: #e8e8e8;
@@ -120,7 +128,7 @@
 
                             <!-- Nav -->
                             <nav id="nav">
-                                {include file="`$TPL_DIR`lib/nav.html" Site=$Project->firstChild()}
+                                {include file="`$TPL_DIR`template/nav.html" Site=$Project->firstChild()}
                             </nav>
                             <!-- /Nav -->
 
@@ -480,6 +488,9 @@
                 </div>
             </div>
         <!-- /Footer Wrapper -->
+
+        <!-- [begin] js combine -->
+        <script src="{$URL_TPL_DIR}bin/js/init.js"></script>
 
     </body>
 </html>
