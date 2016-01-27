@@ -31,16 +31,12 @@
 
 	#header-wrapper
 	{
-		min-height: 500px !important;
+		min-height: 500px;
 	}
 
 	#intro-wrapper
 	{
 		padding-bottom: 7em;
-	}
-	
-	#footer-wrapper
-	{
 	}
 
 		#footer-wrapper hr
@@ -54,7 +50,7 @@
 
 	#header
 	{
-		min-height: 500px !important;
+		/*min-height: 500px !important;*/
 	}
 
 /*********************************************************************************/

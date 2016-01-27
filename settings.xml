@@ -23,6 +23,7 @@
                 </section>
 
                 <section name="headerSettings">
+                    <!--
                     <conf name="minHeaderNoSidebar">
                         <type><![CDATA[bool]]></type>
                     </conf>
@@ -31,6 +32,11 @@
                     </conf>
                     <conf name="minHeaderRightSidebar">
                         <type><![CDATA[bool]]></type>
+                    </conf>
+-->
+                    <conf name="headerSize">
+                        <type><![CDATA[integer]]></type>
+                        <defaultvalue>350</defaultvalue>
                     </conf>
                 </section>
 
@@ -107,11 +113,12 @@
                         </settings>
 
                         <!-- Small header? -->
+
                         <settings title="headerSettings" name="headerSettings">
                             <title>
                                 <locale group="quiqqer/template-html5up-escape-velocity" var="html5up-escape-velocity.header.settings.text" />
                             </title>
-
+                            <!--
                             <input conf="html5up-escape-velocity.headerSettings.minHeaderNoSidebar" type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderNoSidebar.text" />
@@ -133,6 +140,15 @@
                                 <description>
                                     <locale group="quiqqer/template-html5up-escape-velocity" var="minHeaderRightSidebar.description" />
                                 </description>
+                            </input>
+                            -->
+                            <!-- header size -->
+                            <input conf="html5up-escape-velocity.headerSettings.headerSize" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="headerSize.text"
+                                            />
+                                </text>
                             </input>
                         </settings>
 

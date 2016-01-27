@@ -55,11 +55,11 @@
     {
         text-decoration: underline;
         color: #717479;
-        -moz-transition: color .25s ease-in-out;
+        /*-moz-transition: color .25s ease-in-out;
         -webkit-transition: color .25s ease-in-out;
         -o-transition: color .25s ease-in-out;
         -ms-transition: color .25s ease-in-out;
-        transition: color .25s ease-in-out;
+        transition: color .25s ease-in-out;*/
     }
 
         a:hover

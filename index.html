@@ -48,7 +48,16 @@
             .button-style1 {
                 background-color: {$colorMain};
             }
-            
+
+            /*.minHeader {*/
+                /*min-height: 0 !important;*/
+                /*height: 820px !important;*/
+            /*}*/
+
+            .headerSize {
+                min-height: {$headerSize}px;
+            }
+
             .wrapper,
             .wrapper .title,
             .button-style1,
@@ -85,18 +94,16 @@
     <body>
         <!-- Header Wrapper -->
         {image src=$Site->getAttribute('image_emotion') assign=emotionImage width=1900 onlysrc=true rewrited=true}
-        <div id="header-wrapper" class="{if $minHeader} minHeader{/if}"
-             class="wrapper"
-             style="background-image: url('{$URL_TPL_DIR}bin/css/images/overlay.png'), url('{$emotionImage}');
-             {if $minHeader} height: 300px !important{/if};
-             "
+        <div id="header-wrapper"
+             class="wrapper headerSize"
+             style="background-image: url('{$URL_TPL_DIR}bin/css/images/overlay.png'), url('{$emotionImage}');"
         >
             <div class="container">
                 <div class="row">
                     <div class="12u">
 
                         <!-- Header -->
-                        <div id="header" style="{if $minHeader} height: 300px !important{/if};">
+                        <div id="header">
 
                             <!-- Logo -->
                             <div id="logo">

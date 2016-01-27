@@ -221,6 +221,12 @@
             <en><![CDATA[Activate small header for right sidebar layout.]]></en>
         </locale>
 
+        <!-- header Size -->
+        <locale name="headerSize.text">
+            <de><![CDATA[Headerhöhe eingeben (in Pixel)]]></de>
+            <en><![CDATA[Size of the header (in pixel)]]></en>
+        </locale>
+
          <!-- color settings -->
         <locale name="colorSettings.title">
             <de><![CDATA[Farbeinstellungen]]></de>

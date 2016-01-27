@@ -62,6 +62,7 @@ $Engine->assign(array(
     'showVelocityFooterHeader' => $Project->getConfig('html5up-escape-velocity.footer.showVelocityFooterHeader'),
     'showSiteContentTitle'     => $Project->getConfig('html5up-escape-velocity.settings.showSiteContentTitle'),
     'showSiteFooterTitle'      => $Project->getConfig('html5up-escape-velocity.settings.showSiteFooterTitle'),
+    'headerSize'               => $Project->getConfig('html5up-escape-velocity.headerSettings.headerSize'),
     'minHeader'                => $minHeader,
     'colorMain'                => $colorMain,
     'ownSiteType'   =>
@@ -69,11 +70,6 @@ $Engine->assign(array(
             ? 1 : 0,
     'quiTplType'    => $Project->getConfig('html5up-escape-velocity.settings.standardType'),
 ));
-
-
-
-
-
 
 /**
  * Second content
