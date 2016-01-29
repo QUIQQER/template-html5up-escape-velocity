@@ -45,6 +45,12 @@
                 color: {$colorMain} !important;
             }
 
+            .quiqqer-navigation-entry:hover a.quiqqer-navigation-link {
+                transition: all 0.2s;
+                color: {$colorMain};
+            }
+
+
             .button-style1 {
                 background-color: {$colorMain};
             }
@@ -85,6 +91,12 @@
             .wrapper-style-prefix-odd,
             .wrapper-style-prefix-odd .title {
                 background-color: #e8e8e8;
+            }
+
+            @media screen and (max-width: 495px) {
+                .headerSize {
+                    min-height: 200px;
+            }
             }
         </style>
 
