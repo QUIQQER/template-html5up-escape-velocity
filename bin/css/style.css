@@ -487,11 +487,15 @@ h2.quiqqer-navigation-title-style {
     border-bottom: 1px solid #eee;
 }
 
-/*
-.quiqqer-navigation-entry {
+
+/*.quiqqer-navigation-entry {
+    border-bottom: 1px solid #ddd;
+}*/
+
+.quiqqer-navigation-level-1 > li {
     border-bottom: 1px solid #ddd;
 }
-*/
+
 .quiqqer-navigation-li {
     margin-bottom: 0 !important;
 }
