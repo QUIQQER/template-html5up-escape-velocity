@@ -39,9 +39,17 @@
         <![endif]-->
 
         <style>
+
+            #header-wrapper {
+                background-position: center center, center center;
+            }
             
             a:hover,
-            .feature-list h3 {
+            .feature-list h3,
+            input[type="submit"]:hover,
+            input[type="reset"]:hover,
+            input[type="button"]:hover,
+            button:hover {
                 color: {$colorMain} !important;
             }
 
@@ -53,6 +61,13 @@
 
             .button-style1 {
                 background-color: {$colorMain};
+            }
+
+            textarea:hover,
+            textarea:focus,
+            input:hover,
+            input:focus {
+                outline-color: {$colorMain};
             }
 
             /*.minHeader {*/
@@ -96,7 +111,7 @@
             @media screen and (max-width: 495px) {
                 .headerSize {
                     min-height: 200px;
-            }
+                }
             }
         </style>
 

@@ -61,7 +61,8 @@
             margin: 0.25em 0 0.25em 0;
         }
 
-    .button
+    .button,
+    input[type="submit"], input[type="reset"], input[type="button"], button
     {
         padding: 0 2.25em 0 2.25em;
         font-size: 0.9em;
