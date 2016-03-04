@@ -48,8 +48,19 @@ if ($Project->getConfig('html5up-escape-velocity.colorSettings.colorMain')) {
     $colorMain = $Project->getConfig('html5up-escape-velocity.colorSettings.colorMain');
 }
 
+/**
+ * header image position
+ */
 
-echo $Project->getConfig('html5up-escape-velocity.settings.minHeaderLeftSidebar');
+$headerImagePosition = $Project->getConfig('html5up-escape-velocity.headerSettings.headerImagePosition');
+if ($headerImagePosition > 100) {
+    $headerImagePosition = 100;
+}
+if ($headerImagePosition < 0) {
+    $headerImagePosition = 0;
+}
+
+// echo $Project->getConfig('html5up-escape-velocity.settings.minHeaderLeftSidebar');
 /**
  * own site type?
  */
@@ -64,6 +75,7 @@ $Engine->assign(array(
     'showSiteFooterTitle'      => $Project->getConfig('html5up-escape-velocity.settings.showSiteFooterTitle'),
     'headerSize'               => $Project->getConfig('html5up-escape-velocity.headerSettings.headerSize'),
     'minHeader'                => $minHeader,
+    'headerImagePosition'      => $headerImagePosition,
     'colorMain'                => $colorMain,
     'ownSiteType'   =>
         strpos($Site->getAttribute('type'), 'quiqqer/template-html5up-escape-velocity:') !== false

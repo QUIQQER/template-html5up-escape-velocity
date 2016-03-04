@@ -33,10 +33,13 @@
                     <conf name="minHeaderRightSidebar">
                         <type><![CDATA[bool]]></type>
                     </conf>
--->
+                    -->
                     <conf name="headerSize">
                         <type><![CDATA[integer]]></type>
                         <defaultvalue>350</defaultvalue>
+                    </conf>
+                    <conf name="headerImagePosition">
+                        <type><![CDATA[integer]]></type>
                     </conf>
                 </section>
 
@@ -149,6 +152,18 @@
                                             var="headerSize.text"
                                             />
                                 </text>
+                            </input>
+                            <input conf="html5up-escape-velocity.headerSettings.headerImagePosition" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="headerImagePosition.text"
+                                            />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-html5up-escape-velocity"
+                                            var="headerImagePosition.description"
+                                            />
+                                </description>
                             </input>
                         </settings>
 

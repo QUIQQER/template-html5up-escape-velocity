@@ -113,6 +113,12 @@
                     min-height: 200px;
                 }
             }
+
+            /* header image position */
+            #header-wrapper {
+                background-position: center center, center {$headerImagePosition}%;
+            }
+
         </style>
 
 
@@ -178,8 +184,8 @@
         <!-- header suffix -->
             {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
             {foreach $headerSuffix as $Brick}
-            <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}"
-                    {if $Brick->getType() == "QUI\Controls\Breadcrumb"} style="padding-top: 3em; padding-bottom: 3em;"{/if}
+            <div class="wrapper {cycle values="wrapper-style-prefix-even,wrapper-style-prefix-odd"}
+                        {if $Brick->getType() == "QUI\Controls\Breadcrumb"} velocity-breadcrumb"{/if}"
                     >
                 {if $Brick->getSetting( 'showBrickTitle' )}
                     <div class="title">{$Brick->getSetting( 'showBrickTitle' )}</div>

@@ -630,7 +630,6 @@ a.quiqqer-navigation-home:hover {
 
     #header-wrapper
     {
-        background-position: center center, center center;
         background-size: auto auto, cover;
         background-attachment: scroll, scroll;
     }
@@ -1036,4 +1035,90 @@ ol ol {
 }
 
 
+/*********************************************************************************/
+/* contact form (site type: contact)
+/*********************************************************************************/
 
+.qui-form > fieldset {
+    border: none;
+}
+
+
+
+.qui-form legend {
+    background: none;
+    margin-bottom: 0;
+    width: auto;
+}
+
+.qui-formfield-body {
+    padding: 10px 0;
+}
+
+.qui-formfield label {
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+.qui-form input[type='radio'],
+.qui-form input[type='checkbox'] {
+    outline: none;
+}
+
+.qui-form input[type='checkbox'],
+.qui-form input[type='radio'] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.qui-form input[type='submit']:hover,
+.qui-form input[type='button']:hover {
+    color: #fff;
+}
+
+.qui-form input:required,
+.qui-form select:required {
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.qui-form select:required {
+    background-position: 98% center;
+}
+
+/*********************************************************************************/
+/* breadcrumb styling
+/*********************************************************************************/
+
+.velocity-breadcrumb {
+    padding: 1.5em 0;
+}
+
+.velocity-breadcrumb ul {
+    margin-bottom: 0;
+}
+
+/*********************************************************************************/
+/* pagination
+/*********************************************************************************/
+
+.quiqqer-sheets-desktop a, .quiqqer-sheets-desktop span {
+    border-radius: 3px !important;
+    color: #5d5d5d;
+    margin-right: 2px !important;
+    padding: 0 15px;
+}
+.quiqqer-sheets-desktop a:hover {
+}
+.quiqqer-sheets-desktop-current {
+    background: #d9d6d7 none repeat scroll 0 0 !important;
+    border: 1px solid #d9d6d7 !important;
+    border-radius: 3px !important;
+    color: #231f20 !important;
+}
+.quiqqer-sheets-desktop-disabled {
+    border-color: #dddddd !important;
+    color: #aaaaaa !important;
+}
