@@ -226,6 +226,14 @@
             <de><![CDATA[Headerhöhe eingeben (in Pixel)]]></de>
             <en><![CDATA[Size of the header (in pixel)]]></en>
         </locale>
+        <locale name="headerImagePosition.text">
+            <de><![CDATA[Vertikale Position des Bildes im Header]]></de>
+            <en><![CDATA[Vertical position of header image]]></en>
+        </locale>
+        <locale name="headerImagePosition.description">
+            <de><![CDATA[Zulässig ist nur eine Zahl zwischen 0 und 100]]></de>
+            <en><![CDATA[Only a number between 0 and 100]]></en>
+        </locale>
 
          <!-- color settings -->
         <locale name="colorSettings.title">
