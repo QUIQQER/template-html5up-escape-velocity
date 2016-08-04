@@ -204,7 +204,8 @@
 
         <!-- Main Wrapper -->
             <div class="wrapper wrapper-style2" style="background-image: none">
-                {if $showSiteContentTitle}
+                {*if $showSiteContentTitle*}
+                {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
                     <div class="title" style="background-image: none">{$Site->getAttribute( 'title' )}</div>
                 {/if}
                 <div class="container">
