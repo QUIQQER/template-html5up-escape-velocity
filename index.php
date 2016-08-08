@@ -139,8 +139,7 @@ $sendContact = function () use ($Project) {
         );
     }
 
-    if (empty($message))
-    {
+    if (empty($message)) {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
                 'quiqqer/template-html5up-escape-velocity',
@@ -149,8 +148,7 @@ $sendContact = function () use ($Project) {
         );
     }
 
-    if (!\QUI\Utils\Security\Orthos::checkMailSyntax($email))
-    {
+    if (!\QUI\Utils\Security\Orthos::checkMailSyntax($email)) {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
                 'quiqqer/template-html5up-escape-velocity',
@@ -176,8 +174,7 @@ Message: $message
     ));
 };
 
-if (isset( $_POST['contact']))
-{
+if (isset($_POST['contact'])) {
     try {
         $sendContact();
 
@@ -185,9 +182,7 @@ if (isset( $_POST['contact']))
             'quiqqer/template-html5up-escape-velocity',
             'success.contact.email.send'
         ));
-
-    } catch (\QUI\Exception $Exception)
-    {
+    } catch (\QUI\Exception $Exception) {
         $Engine->assign('contact_error_message', $Exception->getMessage());
     }
 }
