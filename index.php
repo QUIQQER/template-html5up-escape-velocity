@@ -4,7 +4,7 @@
  * Emotion
  */
 
-\QUI\Utils\Site::setRecursivAttribute( $Site, 'image_emotion' );
+\QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
 /**
  * Project Logo
@@ -35,7 +35,6 @@ switch ($Template->getLayoutType()) {
     case 'layout/noSidebar':
         $minHeader = $Project->getConfig('html5up-escape-velocity.headerSettings.minHeaderNoSidebar');
         break;
-
 }
 
 /**
@@ -87,8 +86,8 @@ $Engine->assign(array(
  * Second content
  */
 
-if ( $Project->getConfig( 'html5up-escape-velocity.content.left_content_recursive' ) ) {
-    \QUI\Utils\Site::setRecursivAttribute( $Site, 'extra_content' );
+if ( $Project->getConfig('html5up-escape-velocity.content.left_content_recursive')) {
+    \QUI\Utils\Site::setRecursivAttribute($Site, 'extra_content');
 }
 
 
@@ -98,20 +97,19 @@ if ( $Project->getConfig( 'html5up-escape-velocity.content.left_content_recursiv
 
 $sendContact = function() use ($Project)
 {
-    if ( !isset( $_POST['contact'] ) ) {
+    if (!isset($_POST['contact'])) {
         return;
     }
 
     $mailTo = $Project->getConfig('html5up-escape-velocity.contact.mailTo');
 
-    if ( empty( $mailTo ) ) {
+    if (empty($mailTo)) {
         return;
     }
 
-
-    if ( !isset( $_POST['name'] ) ||
-         !isset( $_POST['email'] ) ||
-         !isset( $_POST['message'] ) )
+    if (!isset($_POST['name']) ||
+         !isset($_POST['email']) ||
+         !isset($_POST['message']))
     {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
@@ -125,7 +123,7 @@ $sendContact = function() use ($Project)
     $email   = $_POST['email'];
     $message = $_POST['message'];
 
-    if ( empty( $name ) )
+    if (empty($name))
     {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
@@ -135,7 +133,7 @@ $sendContact = function() use ($Project)
         );
     }
 
-    if ( empty( $email ) )
+    if (empty($email))
     {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
@@ -145,7 +143,7 @@ $sendContact = function() use ($Project)
         );
     }
 
-    if ( empty( $message ) )
+    if (empty($message))
     {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
@@ -155,7 +153,7 @@ $sendContact = function() use ($Project)
         );
     }
 
-    if ( !\QUI\Utils\Security\Orthos::checkMailSyntax( $email ) )
+    if (!\QUI\Utils\Security\Orthos::checkMailSyntax($email))
     {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
@@ -167,12 +165,12 @@ $sendContact = function() use ($Project)
 
     $mailtext = "Contact from {$_SERVER['HTTP_HOST']}
 
-    From: $name
-    E-Mail: $email
-    
-    Message: $message
-    
-    ";
+From: $name
+E-Mail: $email
+
+Message: $message
+
+";
 
     $Mail = new \QUI\Mail();
     $Mail->send(array(
@@ -182,21 +180,20 @@ $sendContact = function() use ($Project)
     ));
 };
 
-if ( isset( $_POST['contact'] ) )
+if (isset( $_POST['contact']))
 {
-
     try
     {
         $sendContact();
 
-        $Engine->assign( 'contact_success_message', \QUI::getLocale()->get(
+        $Engine->assign('contact_success_message', \QUI::getLocale()->get(
             'quiqqer/template-html5up-escape-velocity',
             'success.contact.email.send'
-        ) );
+        ));
 
-    } catch ( \QUI\Exception $Exception )
+    } catch (\QUI\Exception $Exception)
     {
-        $Engine->assign( 'contact_error_message', $Exception->getMessage() );
+        $Engine->assign('contact_error_message', $Exception->getMessage());
     }
 }
 
