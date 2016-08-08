@@ -86,7 +86,7 @@ $Engine->assign(array(
  * Second content
  */
 
-if ( $Project->getConfig('html5up-escape-velocity.content.left_content_recursive')) {
+if ($Project->getConfig('html5up-escape-velocity.content.left_content_recursive')) {
     \QUI\Utils\Site::setRecursivAttribute($Site, 'extra_content');
 }
 
@@ -95,8 +95,7 @@ if ( $Project->getConfig('html5up-escape-velocity.content.left_content_recursive
  * Footer contact
  */
 
-$sendContact = function() use ($Project)
-{
+$sendContact = function () use ($Project) {
     if (!isset($_POST['contact'])) {
         return;
     }
@@ -109,8 +108,7 @@ $sendContact = function() use ($Project)
 
     if (!isset($_POST['name']) ||
          !isset($_POST['email']) ||
-         !isset($_POST['message']))
-    {
+         !isset($_POST['message'])) {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
                 'quiqqer/template-html5up-escape-velocity',
@@ -123,8 +121,7 @@ $sendContact = function() use ($Project)
     $email   = $_POST['email'];
     $message = $_POST['message'];
 
-    if (empty($name))
-    {
+    if (empty($name)) {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
                 'quiqqer/template-html5up-escape-velocity',
@@ -133,8 +130,7 @@ $sendContact = function() use ($Project)
         );
     }
 
-    if (empty($email))
-    {
+    if (empty($email)) {
         throw new \QUI\Exception(
             \QUI::getLocale()->get(
                 'quiqqer/template-html5up-escape-velocity',
@@ -182,8 +178,7 @@ Message: $message
 
 if (isset( $_POST['contact']))
 {
-    try
-    {
+    try {
         $sendContact();
 
         $Engine->assign('contact_success_message', \QUI::getLocale()->get(
