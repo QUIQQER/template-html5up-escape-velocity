@@ -1,37 +1,32 @@
 {
-    "name" : "quiqqer/template-html5up-escape-velocity",
-    "type" : "quiqqer-template",
-    "description" : "Escape Velocity 2.5 by HTML5 UP",
-
-    "version" : "dev-master",
-    "license" : "MIT",
-
-    "authors" : [
+    "name": "quiqqer\/template-html5up-escape-velocity",
+    "type": "quiqqer-template",
+    "description": "Escape Velocity 2.5 by HTML5 UP",
+    "license": "MIT",
+    "authors": [
         {
             "name": "Henning Leutz",
             "email": "leutz@pcsg.de",
-            "homepage": "http://www.pcsg.de",
+            "homepage": "http:\/\/www.pcsg.de",
             "role": "Developer"
         },
         {
             "name": "Michael Danielczok",
             "email": "danielczok@pcsg.de",
-            "homepage": "http://www.pcsg.de",
+            "homepage": "http:\/\/www.pcsg.de",
             "role": "Developer"
         }
     ],
-
-    "support" : {
-        "email" : "support@pcsg.de"
+    "support": {
+        "email": "support@pcsg.de"
     },
-
     "require": {
-        "quiqqer/quiqqer": "*@dev",
-        "quiqqer/bricks": "*@dev",
-        "quiqqer/menu": "1.*",
-        "quiqqer/buttons": "*@dev",
-        "quiqqer/messages": "*@dev",
-        "quiqqer/unsemantic": "*@dev",
-        "quiqqer/fontawesome": "*@dev"
+        "quiqqer\/quiqqer": "*@dev",
+        "quiqqer\/bricks": "*@dev",
+        "quiqqer\/menu": "1.*",
+        "quiqqer\/buttons": "*@dev",
+        "quiqqer\/messages": "*@dev",
+        "quiqqer\/unsemantic": "*@dev",
+        "quiqqer\/fontawesome": "*@dev"
     }
 }
